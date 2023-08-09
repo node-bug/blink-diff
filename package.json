@@ -33,18 +33,18 @@
     "docs": "yuidoc ."
   },
   "dependencies": {
-    "pngjs-image": "~0.11.5",
+    "pngjs-image": "foxandgeese/pngjs-image#3d4ce08a8d",
     "preceptor-core": "~0.10.0",
-    "promise": "6.0.0"
+    "promise": "8.3.0"
   },
   "devDependencies": {
-    "chai": "1.9.2",
-    "coveralls": "2.11.2",
-    "codeclimate-test-reporter": "0.0.4",
-    "istanbul": "0.3.2",
-    "mocha": "1.21.4",
-    "sinon": "1.12.2",
-    "sinon-chai": "2.7.0",
-    "yuidocjs": "0.3.50"
+    "chai": "4.3.7",
+    "codeclimate-test-reporter": "0.5.1",
+    "coveralls": "3.1.1",
+    "istanbul": "0.4.5",
+    "mocha": "10.2.0",
+    "sinon": "15.2.0",
+    "sinon-chai": "3.7.0",
+    "yuidocjs": "0.10.2"
   }
 }
