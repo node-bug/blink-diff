@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "pngjs-image": "foxandgeese/pngjs-image#3d4ce08a8d",
-    "preceptor-core": "~0.10.0",
+    "preceptor-core": "foxandgeese/preceptor-core#7db13b58b7",
     "promise": "8.3.0"
   },
   "devDependencies": {
