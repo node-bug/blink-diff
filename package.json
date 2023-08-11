@@ -33,7 +33,7 @@
     "docs": "yuidoc ."
   },
   "dependencies": {
-    "pngjs-image": "foxandgeese/pngjs-image#79cac84dbc",
+    "pngjs-image": "foxandgeese/pngjs-image#5d5f498b5a",
     "preceptor-core": "foxandgeese/preceptor-core#7db13b58b7",
     "promise": "8.3.0"
   },
