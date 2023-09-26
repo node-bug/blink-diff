@@ -3,20 +3,11 @@ Blink-Diff
 
 A lightweight image comparison tool
 
-[![Build Status](https://img.shields.io/travis/yahoo/blink-diff.svg)](http://travis-ci.org/yahoo/blink-diff)
-[![Coveralls Coverage](https://img.shields.io/coveralls/yahoo/blink-diff.svg)](https://coveralls.io/r/yahoo/blink-diff)
-[![Code Climate Grade](https://img.shields.io/codeclimate/github/yahoo/blink-diff.svg)](https://codeclimate.com/github/yahoo/blink-diff)
+[![NPM version](https://badge.fury.io/js/@foxandgeese/blink-diff.svg)](https://www.npmjs.com/package/@foxandgeese/blink-diff)
+[![NPM License](https://img.shields.io/npm/l/@foxandgeese/blink-diff.svg)](https://www.npmjs.com/package/@foxandgeese/blink-diff)
 
-[![NPM version](https://badge.fury.io/js/blink-diff.svg)](https://www.npmjs.com/package/blink-diff)
-[![NPM License](https://img.shields.io/npm/l/blink-diff.svg)](https://www.npmjs.com/package/blink-diff)
-
-[![NPM](https://nodei.co/npm/blink-diff.png?downloads=true&stars=true)](https://www.npmjs.com/package/blink-diff)
-[![NPM](https://nodei.co/npm-dl/blink-diff.png?months=3&height=2)](https://www.npmjs.com/package/blink-diff)
-
-[![Coverage Report](https://img.shields.io/badge/Coverage_Report-Available-blue.svg)](http://yahoo.github.io/blink-diff/coverage/lcov-report/)
-[![API Documentation](https://img.shields.io/badge/API_Documentation-Available-blue.svg)](http://yahoo.github.io/blink-diff/docs/)
-
-[![Gitter Support](https://img.shields.io/badge/Support-Gitter_IM-yellow.svg)](https://gitter.im/preceptorjs/support)
+[![NPM](https://nodei.co/npm/@foxandgeese/blink-diff.png?downloads=true&stars=true)](https://www.npmjs.com/package/@foxandgeese/blink-diff)
+[![NPM](https://nodei.co/npm-dl/@foxandgeese/blink-diff.png?months=3&height=2)](https://www.npmjs.com/package/@foxandgeese/blink-diff)
 
 **Table of Contents**
 * [Installation](#installation)
@@ -297,7 +288,7 @@ The following third-party libraries are used by this module:
 
 ###Dependencies
 * promise: https://github.com/then/promise
-* pngjs-image: https://github.com/yahoo/pngjs-image
+* pngjs-image: https://github.com/foxandgeese/pngjs-image
 
 ###Dev-Dependencies
 * chai: http://chaijs.com

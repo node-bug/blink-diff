@@ -2,7 +2,7 @@
 // Copyrights licensed under the Mit License. See the accompanying LICENSE file for terms.
 
 var assert = require('assert'),
-	PNGImage = require('pngjs-image'),
+	PNGImage = require('@foxandgeese/pngjs-image'),
 	Promise = require('promise');
 
 function load(value, defaultValue) {

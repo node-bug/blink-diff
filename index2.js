@@ -1,12 +1,12 @@
 // Copyright 2015 Yahoo! Inc.
 // Copyrights licensed under the Mit License. See the accompanying LICENSE file for terms.
 
-var PNGImage = require('pngjs-image'),
+var PNGImage = require('@foxandgeese/pngjs-image'),
 	Config = require('./lib/configuration/config'),
 	Image = require('./lib/image'),
 	PixelComparator = require('./lib/pixelComparator'),
 	constants = require('./lib/constants'),
-	Base = require('preceptor-core').Base;
+	Base = require('@foxandgeese/preceptor-core').Base;
 
 /**
  * @class BlinkDiff

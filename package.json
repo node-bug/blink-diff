@@ -1,22 +1,28 @@
 {
-  "name": "blink-diff",
-  "version": "1.0.13",
+  "name": "@foxandgeese/blink-diff",
+  "version": "2.0.0",
   "description": "A lightweight image comparison tool",
   "license": "MIT",
   "main": "index.js",
-  "bugs": "https://github.com/yahoo/blink-diff/issues",
-  "homepage": "https://github.com/yahoo/blink-diff",
+  "bugs": "https://github.com/foxandgeese/blink-diff/issues",
+  "homepage": "https://github.com/foxandgeese/blink-diff",
   "bin": {
     "blink-diff": "bin/blink-diff"
   },
-  "author": {
-    "name": "Marcel Erz",
-    "email": "erz@yahoo-inc.com",
-    "url": "http://www.marcelerz.com"
-  },
+  "contributors": [
+    {
+      "name": "Marcel Erz",
+      "email": "erz@yahoo-inc.com",
+      "url": "http://www.marcelerz.com"
+    },
+    {
+      "name": "Galen Huntington",
+      "email": "galen@foxandgeese.com"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yahoo/blink-diff.git"
+    "url": "https://github.com/foxandgeese/blink-diff.git"
   },
   "keywords": [
     "image-diff",
@@ -33,18 +39,18 @@
     "docs": "yuidoc ."
   },
   "dependencies": {
-    "pngjs-image": "foxandgeese/pngjs-image#1959b3a70c",
-    "preceptor-core": "foxandgeese/preceptor-core#7db13b58b7",
-    "promise": "8.3.0"
+    "@foxandgeese/pngjs-image": "^1.0.0",
+    "@foxandgeese/preceptor-core": "^1.0.0",
+    "promise": "^8.3.0"
   },
   "devDependencies": {
-    "chai": "4.3.7",
+    "chai": "^4.3.7",
     "codeclimate-test-reporter": "0.5.1",
-    "coveralls": "3.1.1",
+    "coveralls": "^3.1.1",
     "istanbul": "0.4.5",
-    "mocha": "10.2.0",
-    "sinon": "15.2.0",
-    "sinon-chai": "3.7.0",
+    "mocha": "^10.2.0",
+    "sinon": "^16.0.0",
+    "sinon-chai": "^3.7.0",
     "yuidocjs": "0.10.2"
   }
 }
