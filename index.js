@@ -2,7 +2,7 @@
 // Copyrights licensed under the Mit License. See the accompanying LICENSE file for terms.
 
 var assert = require('assert'),
-	PNGImage = require('@foxandgeese/pngjs-image'),
+	PNGImage = require('@nodebug/pngjs-image'),
 	Promise = require('promise');
 
 function load(value, defaultValue) {
@@ -130,7 +130,7 @@ function load(value, defaultValue) {
  * @property {float} _gammaG
  * @property {float} _gammaB
  */
-function BlinkDiff (options) {
+function BlinkDiff(options) {
 
 	this._imageA = options.imageA;
 	this._imageAPath = options.imageAPath;
@@ -208,7 +208,7 @@ function BlinkDiff (options) {
 	this._cropImageB = options.cropImageB;
 
 	// Prepare reference white
-	this._refWhite = this._convertRgbToXyz({c1: 1, c2: 1, c3: 1, c4: 1});
+	this._refWhite = this._convertRgbToXyz({ c1: 1, c2: 1, c3: 1, c4: 1 });
 
 	this._perceptual = load(options.perceptual, false);
 
@@ -322,8 +322,8 @@ BlinkDiff.prototype = {
 	 * @example
 	 *     var blinkDiff = BlinkDiff(...);
 	 *     blinkDiff.runWithPromise().then(function (result) {
-     *       ...
-     *     });
+	 *       ...
+	 *     });
 	 * @return {Promise}
 	 */
 	runWithPromise: function () {
@@ -337,12 +337,12 @@ BlinkDiff.prototype = {
 	 * @example
 	 *     var blinkDiff = BlinkDiff(...);
 	 *     blinkDiff.run(function (err, result) {
-     *       if (err) {
-     *         throw err;
-     *       }
-     *
-     *       ...
-     *     });
+	 *       if (err) {
+	 *         throw err;
+	 *       }
+	 *
+	 *       ...
+	 *     });
 	 *
 	 * @param {function} fn
 	 */
@@ -430,24 +430,24 @@ BlinkDiff.prototype = {
 
 			// Comparison
 			result = this._compare(this._imageACompare, this._imageBCompare, this._imageOutput, this._delta, { // Output-Mask color
-					red: this._outputMaskRed,
-					green: this._outputMaskGreen,
-					blue: this._outputMaskBlue,
-					alpha: this._outputMaskAlpha,
-					opacity: this._outputMaskOpacity
-				}, { // Output-Shift color
-					red: this._outputShiftRed,
-					green: this._outputShiftGreen,
-					blue: this._outputShiftBlue,
-					alpha: this._outputShiftAlpha,
-					opacity: this._outputShiftOpacity
-				}, { // Background color
-					red: this._outputBackgroundRed,
-					green: this._outputBackgroundGreen,
-					blue: this._outputBackgroundBlue,
-					alpha: this._outputBackgroundAlpha,
-					opacity: this._outputBackgroundOpacity
-				}, this._hShift, this._vShift, this._perceptual, gamma);
+				red: this._outputMaskRed,
+				green: this._outputMaskGreen,
+				blue: this._outputMaskBlue,
+				alpha: this._outputMaskAlpha,
+				opacity: this._outputMaskOpacity
+			}, { // Output-Shift color
+				red: this._outputShiftRed,
+				green: this._outputShiftGreen,
+				blue: this._outputShiftBlue,
+				alpha: this._outputShiftAlpha,
+				opacity: this._outputShiftOpacity
+			}, { // Background color
+				red: this._outputBackgroundRed,
+				green: this._outputBackgroundGreen,
+				blue: this._outputBackgroundBlue,
+				alpha: this._outputBackgroundAlpha,
+				opacity: this._outputBackgroundOpacity
+			}, this._hShift, this._vShift, this._perceptual, gamma);
 
 			// Create composition if requested
 			if (this._debug) {
@@ -564,18 +564,18 @@ BlinkDiff.prototype = {
 					alpha: this._outputMaskAlpha,
 					opacity: this._outputMaskOpacity
 				}, { // Output-Shift color
-					red: this._outputShiftRed,
-					green: this._outputShiftGreen,
-					blue: this._outputShiftBlue,
-					alpha: this._outputShiftAlpha,
-					opacity: this._outputShiftOpacity
-				}, { // Background color
-					red: this._outputBackgroundRed,
-					green: this._outputBackgroundGreen,
-					blue: this._outputBackgroundBlue,
-					alpha: this._outputBackgroundAlpha,
-					opacity: this._outputBackgroundOpacity
-				},
+				red: this._outputShiftRed,
+				green: this._outputShiftGreen,
+				blue: this._outputShiftBlue,
+				alpha: this._outputShiftAlpha,
+				opacity: this._outputShiftOpacity
+			}, { // Background color
+				red: this._outputBackgroundRed,
+				green: this._outputBackgroundGreen,
+				blue: this._outputBackgroundBlue,
+				alpha: this._outputBackgroundAlpha,
+				opacity: this._outputBackgroundOpacity
+			},
 				this._hShift, this._vShift,
 				this._perceptual,
 				gamma
@@ -930,15 +930,17 @@ BlinkDiff.prototype = {
 			c1: color.c1 / 255, c2: color.c2 / 255, c3: color.c3 / 255, c4: color.c4
 		};
 
-		if (gamma || gamma.R !== undefined || gamma.G !== undefined || gamma.B !== undefined) {
-			if (gamma.R !== undefined) {
-				result.c1 = Math.pow(result.c1, gamma.R);
-			}
-			if (gamma.G !== undefined) {
-				result.c2 = Math.pow(result.c2, gamma.G);
-			}
-			if (gamma.B !== undefined) {
-				result.c3 = Math.pow(result.c3, gamma.B);
+		if (gamma) {
+			if (gamma.R === undefined || gamma.G === undefined || gamma.B === undefined || gamma.R !== undefined || gamma.G !== undefined || gamma.B !== undefined) {
+				if (gamma.R !== undefined) {
+					result.c1 = Math.pow(result.c1, gamma.R);
+				}
+				if (gamma.G !== undefined) {
+					result.c2 = Math.pow(result.c2, gamma.G);
+				}
+				if (gamma.B !== undefined) {
+					result.c3 = Math.pow(result.c3, gamma.B);
+				}
 			}
 		}
 
@@ -975,7 +977,7 @@ BlinkDiff.prototype = {
 	_convertXyzToCieLab: function (color) {
 		var result = {}, c1, c2, c3;
 
-		function f (t) {
+		function f(t) {
 			return (t > 0.00885645167904) ? Math.pow(t, 1 / 3) : 70.08333333333263 * t + 0.13793103448276;
 		}
 

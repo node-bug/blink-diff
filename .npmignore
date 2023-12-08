@@ -12,3 +12,4 @@ screwdriver/
 Makefile
 .idea/
 docs/
+package-lock.json

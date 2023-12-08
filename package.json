@@ -1,11 +1,11 @@
 {
-  "name": "@foxandgeese/blink-diff",
-  "version": "2.0.0",
+  "name": "@nodebug/blink-diff",
+  "version": "1.0.0",
   "description": "A lightweight image comparison tool",
   "license": "MIT",
   "main": "index.js",
-  "bugs": "https://github.com/foxandgeese/blink-diff/issues",
-  "homepage": "https://github.com/foxandgeese/blink-diff",
+  "bugs": "https://github.com/node-bug/blink-diff/issues",
+  "homepage": "https://github.com/node-bug/blink-diff",
   "bin": {
     "blink-diff": "bin/blink-diff"
   },
@@ -16,13 +16,13 @@
       "url": "http://www.marcelerz.com"
     },
     {
-      "name": "Galen Huntington",
-      "email": "galen@foxandgeese.com"
+      "name": "Node Bug",
+      "email": "nodebug@outlook.com"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/foxandgeese/blink-diff.git"
+    "url": "https://github.com/node-bug/blink-diff.git"
   },
   "keywords": [
     "image-diff",
@@ -39,8 +39,8 @@
     "docs": "yuidoc ."
   },
   "dependencies": {
-    "@foxandgeese/pngjs-image": "^1.0.0",
-    "@foxandgeese/preceptor-core": "^1.0.0",
+    "@nodebug/pngjs-image": "^1.0.0",
+    "@nodebug/preceptor-core": "^1.0.0",
     "promise": "^8.3.0"
   },
   "devDependencies": {

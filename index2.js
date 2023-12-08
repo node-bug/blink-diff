@@ -1,12 +1,12 @@
 // Copyright 2015 Yahoo! Inc.
 // Copyrights licensed under the Mit License. See the accompanying LICENSE file for terms.
 
-var PNGImage = require('@foxandgeese/pngjs-image'),
+var PNGImage = require('@nodebug/pngjs-image'),
 	Config = require('./lib/configuration/config'),
 	Image = require('./lib/image'),
 	PixelComparator = require('./lib/pixelComparator'),
 	constants = require('./lib/constants'),
-	Base = require('@foxandgeese/preceptor-core').Base;
+	Base = require('@nodebug/preceptor-core').Base;
 
 /**
  * @class BlinkDiff
@@ -146,7 +146,7 @@ var BlinkDiff = Base.extend(
 			this._clip(imageA, imageB);
 
 			dimension = imageA.getWidth() * imageB.getWidth();
-			flagField = new Buffer(dimension);
+			flagField = Buffer.alloc(dimension);
 			flagField.fill(0);
 
 			config.getComparisons().forEach(function (comparison, index) {

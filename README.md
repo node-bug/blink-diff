@@ -3,11 +3,11 @@ Blink-Diff
 
 A lightweight image comparison tool
 
-[![NPM version](https://badge.fury.io/js/@foxandgeese/blink-diff.svg)](https://www.npmjs.com/package/@foxandgeese/blink-diff)
-[![NPM License](https://img.shields.io/npm/l/@foxandgeese/blink-diff.svg)](https://www.npmjs.com/package/@foxandgeese/blink-diff)
+[![NPM version](https://badge.fury.io/js/@nodebug/blink-diff.svg)](https://www.npmjs.com/package/@nodebug/blink-diff)
+[![NPM License](https://img.shields.io/npm/l/@nodebug/blink-diff.svg)](https://www.npmjs.com/package/@nodebug/blink-diff)
 
-[![NPM](https://nodei.co/npm/@foxandgeese/blink-diff.png?downloads=true&stars=true)](https://www.npmjs.com/package/@foxandgeese/blink-diff)
-[![NPM](https://nodei.co/npm-dl/@foxandgeese/blink-diff.png?months=3&height=2)](https://www.npmjs.com/package/@foxandgeese/blink-diff)
+[![NPM](https://nodei.co/npm/@nodebug/blink-diff.png?downloads=true&stars=true)](https://www.npmjs.com/package/@nodebug/blink-diff)
+[![NPM](https://nodei.co/npm-dl/@nodebug/blink-diff.png?months=3&height=2)](https://www.npmjs.com/package/@nodebug/blink-diff)
 
 **Table of Contents**
 * [Installation](#installation)
@@ -288,7 +288,7 @@ The following third-party libraries are used by this module:
 
 ###Dependencies
 * promise: https://github.com/then/promise
-* pngjs-image: https://github.com/foxandgeese/pngjs-image
+* pngjs-image: https://github.com/node-bug/pngjs-image
 
 ###Dev-Dependencies
 * chai: http://chaijs.com

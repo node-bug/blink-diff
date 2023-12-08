@@ -2,7 +2,7 @@
 // Copyrights licensed under the Mit License. See the accompanying LICENSE file for terms.
 
 var BlinkDiff = require('../');
-var PNGImage = require('@foxandgeese/pngjs-image');
+var PNGImage = require('@nodebug/pngjs-image');
 var Promise = require('promise');
 var fs = require('fs');
 var expect = require('chai').expect;
